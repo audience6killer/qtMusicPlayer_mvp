@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="67645469-2897-4e1b-91b9-d627aca11df4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/qtMusicPlayer_mvp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/icons/menu.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/icons/next.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/icons/play.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/icons/previous.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/icons/repeat.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/icons/shuffle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/icons/volume-mute.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/icons/volume-up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/icons/volume.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/album-cover-test.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/qtMusicPlayer/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/qtMusicPlayer/controller/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/qtMusicPlayer/theme/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/qtMusicPlayer/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/qtMusicPlayer/utils/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/qtMusicPlayer/view/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/qtMusicPlayer/view/mainwindow_ui.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2dmx3pgK2U1KwiP2jqNqknrAeua" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.mainwindow_ui.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore_missing_gitignore": "true",
+    "last_opened_file_path": "/home/vill4in/PycharmProjects/qtMusicPlayer_mvp/res/img"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res/img" />
+      <recent name="$PROJECT_DIR$/res/icons" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/source/qtMusicPlayer/view" />
+      <recent name="$PROJECT_DIR$/source/qtMusicPlayer/utils_" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="mainwindow_ui" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="qtMusicPlayer_mvp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/source/qtMusicPlayer/controller" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/source/qtMusicPlayer/view/mainwindow_ui.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.mainwindow_ui" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="67645469-2897-4e1b-91b9-d627aca11df4" name="Changes" comment="" />
+      <created>1710626858848</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710626858848</updated>
+    </task>
+    <servers />
+  </component>
+</project>
