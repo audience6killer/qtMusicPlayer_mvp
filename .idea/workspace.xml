@@ -4,33 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67645469-2897-4e1b-91b9-d627aca11df4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/qtMusicPlayer_mvp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/icons/menu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/icons/next.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/icons/play.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/icons/previous.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/icons/repeat.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/icons/shuffle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/icons/volume-mute.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/icons/volume-up.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/icons/volume.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/album-cover-test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/qtMusicPlayer/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/qtMusicPlayer/controller/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/qtMusicPlayer/theme/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/qtMusicPlayer/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/qtMusicPlayer/utils/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/qtMusicPlayer/view/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/qtMusicPlayer/view/mainwindow_ui.py" afterDir="false" />
+    <list default="true" id="67645469-2897-4e1b-91b9-d627aca11df4" name="Changes" comment="UI has background gradient, but not blur, clashing colors">
+      <change afterPath="$PROJECT_DIR$/res/img/album-cover-test-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/album-cover-test-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/album-cover-test-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/album-cover-test-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/album-cover-test-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/album-cover-test-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/album-cover-test-8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/qtMusicPlayer/theme/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/qtMusicPlayer/theme/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/qtMusicPlayer/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/qtMusicPlayer/utils/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/qtMusicPlayer/view/mainwindow_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/qtMusicPlayer/view/mainwindow_ui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +94,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
+        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
       </set>
     </attachedChunks>
   </component>
@@ -122,6 +107,19 @@
       <option name="presentableId" value="Default" />
       <updated>1710626858848</updated>
     </task>
+    <task id="LOCAL-00001" summary="UI has background gradient, but not blur, clashing colors">
+      <option name="closed" value="true" />
+      <created>1710906715275</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710906715275</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="UI has background gradient, but not blur, clashing colors" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI has background gradient, but not blur, clashing colors" />
   </component>
 </project>

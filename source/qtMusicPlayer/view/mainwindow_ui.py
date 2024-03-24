@@ -3,7 +3,7 @@ Main window layout
 """
 import os
 
-from PyQt6.QtWidgets import (
+from PyQt5.QtWidgets import (
     QMainWindow,
     QVBoxLayout,
     QHBoxLayout,
@@ -13,47 +13,128 @@ from PyQt6.QtWidgets import (
     QPushButton,
     QSizePolicy,
     QApplication,
+    QGraphicsBlurEffect,
 )
-from PyQt6.QtGui import QPixmap, QIcon, QPainter, QLinearGradient, QColor
-from PyQt6.QtCore import Qt, QSize
+from PyQt5.QtGui import QPixmap, QIcon, QPainter, QLinearGradient, QColor
+from PyQt5.QtCore import Qt, QSize, QPointF
+from qframelesswindow import FramelessMainWindow, StandardTitleBar
 
 from ..utils.utils import get_rounded_pixmap, get_image_color_palette
 
 RES_PATH = os.path.join(os.path.dirname(__file__), '..', '..', '..', 'res')
 THEME_PATH = os.path.join(os.path.dirname(__file__), '..', 'theme')
+ALBUM_COVER = 'img/album-cover-test.jpg'
 
 
-class CustomMainWidget(QWidget):
-    def __init__(self, colors: list):
-        super().__init__()
+class CustomTitleBar(StandardTitleBar):
+    def __init__(self, parent):
+        super().__init__(parent)
+
+        self.minBtn.setHoverColor(Qt.white)
+        self.minBtn.setHoverBackgroundColor(QColor(0, 100, 182))
+        self.minBtn.setPressedColor(Qt.white)
+
+        # Use qss to customize the title bar button
+        self.maxBtn.setStyleSheet(
+            """
+            TitleBarButton {
+                qproperty-hoverColor: #e9ecef;
+                qproperty-hoverBackgroundColor: #e9ecef;
+                qproperty-pressedColor: #e9ecef;
+                qproperty-pressedBackgroundColor: #e9ecef;
+            }
+            """
+        )
+        self.maxBtn.hide()
+
+class Window(FramelessMainWindow):
+    def __init__(self, colors: list, parent=None):
+        super().__init__(parent=parent)
         self.colors = colors
+        self.setTitleBar(CustomTitleBar(self))
+        #self.setWindowTitle("PyQt-Frameless-Window")
+        self.titleBar.raise_()
+        #self.titleBar.layout().insertWidget(0, menuBar, 0, Qt.AlignLeft)
+        self.titleBar.layout().insertStretch(1, 1)
+        self.setMenuWidget(self.titleBar)
 
     def paintEvent(self, event):
         painter = QPainter(self)
-        gradient = QLinearGradient(0, 0, self.width(), self.height())
-        gradient.setColorAt(0,
-                            QColor(self.colors[0][0], self.colors[0][1], self.colors[0][2]))
-        gradient.setColorAt(1,
-                            QColor(self.colors[2][0], self.colors[2][1], self.colors[2][2]))
-        painter.setBrush(gradient)
-        painter.drawRect(self.rect())
+        painter.setRenderHint(QPainter.Antialiasing)
+
+        # Define the background colors
+        background_colors = [
+            QColor(self.colors[0][0], self.colors[0][1], self.colors[0][2]),  # Sample background color 0
+            QColor(self.colors[2][0], self.colors[2][1], self.colors[2][2]),  # Sample background color 0Color(),  # Sample background color 1
+            QColor(self.colors[1][0], self.colors[1][1], self.colors[1][2]),  # Sample background color 0QColor(0, 0, 255)  # Sample background color 2
+        ]
+
+        # Define the gradient angles
+        gradient_angles = [(QPointF(0, 0), QPointF(self.width(), self.height())),
+                           (QPointF(0, self.height()), QPointF(self.width(), 0)),
+                           (QPointF(self.width(), 0), QPointF(0, self.height()))]
+
+        for i, (start_point, end_point) in enumerate(gradient_angles):
+            gradient = QLinearGradient(start_point, end_point)
+
+            # Set the color stops with varying opacity
+            gradient.setColorAt(0, background_colors[i].lighter(120))
+            gradient.setColorAt(0.7071, QColor(background_colors[i].red(),
+                                               background_colors[i].green(),
+                                               background_colors[i].blue(), 0))
+
+            painter.setBrush(gradient)
+            painter.drawRect(self.rect())
+        #gradient = QLinearGradient(0, 0, self.width(), self.height())
+        #gradient.setColorAt(0,
+        #                    QColor(self.colors[0][0], self.colors[0][1], self.colors[0][2]))
+        #gradient.setColorAt(0.5,
+        #                    QColor(self.colors[2][0], self.colors[2][1], self.colors[2][2]))
+        #gradient.setColorAt(1,
+        #                    QColor(self.colors[1][0], self.colors[1][1], self.colors[1][2]))
+        #painter.setBrush(gradient)
+        #painter.drawRect(self.rect())
+
+
+
+
+class CustomMainWidget(QWidget):
+    def __init__(self):
+        super().__init__()
+
+   # def paintEvent(self, event):
+   #     self.blur = QGraphicsBlurEffect()
+   #     self.blur.setBlurRadius(15)
+   #     self.setGraphicsEffect(self.blur)
+    #    painter = QPainter(self)
+    #    gradient = QLinearGradient(0, 0, self.width(), self.height())
+    #    gradient.setColorAt(0,
+    #                        QColor(self.colors[0][0], self.colors[0][1], self.colors[0][2]))
+    #    gradient.setColorAt(1,
+    #                        QColor(self.colors[2][0], self.colors[2][1], self.colors[2][2]))
+    #    painter.setBrush(gradient)
+    #    painter.drawRect(self.rect())
+
 
 class MainWindowUI(object):
-    def __init__(self, main_window: QMainWindow, app: QApplication):
+    def __init__(self, main_window, app: QApplication):
         # Window configuration
-        main_window.setWindowTitle("qtMusicPlayer")
-        main_window.setFixedSize(QSize(530, 630))
+        self.main_window = main_window
+        #self.main_window.setWindowTitle("qtMusicPlayer")
+        self.main_window.setFixedSize(QSize(530, 700))
         self.setup_ui()
-        self.set_style_sheet(app)
+        #self.set_style_sheet(app)
+        with open(os.path.join(THEME_PATH, 'styles.css'), 'r') as theme:
+            app.setStyleSheet(theme.read())
 
     def set_style_sheet(self, main_window):
         with open(os.path.join(THEME_PATH, 'styles.css'), 'r') as theme:
             main_window.setStyleSheet(theme.read())
 
     def setup_ui(self):
-        colors = get_image_color_palette(os.path.join(RES_PATH, 'img/album-cover-test.jpg'))
+        #colors = get_image_color_palette(os.path.join(RES_PATH, 'img/album-cover-test-3.jpg'))
         # Main layout configuration
-        self.main_widget = CustomMainWidget(colors)
+        self.main_widget = CustomMainWidget()
         self.main_layout = QVBoxLayout()
         self.main_layout.setContentsMargins(10, 20, 10, 20)
 
@@ -64,7 +145,7 @@ class MainWindowUI(object):
         self.album_cover_label.setFixedSize(QSize(300, 300))
 
         pixmap = QPixmap()
-        pixmap.load(os.path.join(RES_PATH, 'img/album-cover-test.jpg'))
+        pixmap.load(os.path.join(RES_PATH, ALBUM_COVER))
         modified_pixmap = get_rounded_pixmap(pixmap.scaled(300, 300, aspectRatioMode=Qt.AspectRatioMode.KeepAspectRatio,
                                                            transformMode=Qt.TransformationMode.SmoothTransformation))
         self.album_cover_label.setPixmap(modified_pixmap)
@@ -236,17 +317,24 @@ class MainWindowUI(object):
         self.main_layout.addLayout(self.menu_layout)
         self.main_widget.setLayout(self.main_layout)
 
-        main_window.setCentralWidget(self.main_widget)
+        self.main_window.setCentralWidget(self.main_widget)
 
 
 if __name__ == "__main__":
     import sys
 
+    # enable dpi scale
+    QApplication.setHighDpiScaleFactorRoundingPolicy(
+        Qt.HighDpiScaleFactorRoundingPolicy.PassThrough)
+    QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
+    QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
     # sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 
     app = QApplication(sys.argv)
+    app.setAttribute(Qt.AA_DontCreateNativeWidgetSiblings)
 
-    main_window = QMainWindow()
+    colors = get_image_color_palette(os.path.join(RES_PATH, ALBUM_COVER))
+    main_window = Window(colors)
     ui = MainWindowUI(main_window, app)
     # ui.setup_ui(main_window)
 

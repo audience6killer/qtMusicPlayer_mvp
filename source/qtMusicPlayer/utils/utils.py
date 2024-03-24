@@ -1,6 +1,5 @@
-
-from PyQt6.QtGui import QPixmap, QColor, QPainter, QBrush
-from PyQt6.QtCore import Qt
+from PyQt5.QtGui import QPixmap, QColor, QPainter, QBrush
+from PyQt5.QtCore import Qt
 from colorthief import ColorThief
 
 
@@ -24,12 +23,15 @@ def get_rounded_pixmap(pixmap: QPixmap, radius=25) -> QPixmap:
     return rounded
 
 
+"""
+    TODO: Reduce image size to increment performance
+"""
 def get_image_color_palette(img_path: str) -> list:
     color_thief = ColorThief(img_path)
     # get the dominant color
-    dominant_color = color_thief.get_color(quality=1)
+    #dominant_color = color_thief.get_color(quality=6)
     # build a color palette
-    palette = color_thief.get_palette(color_count=2)
+    palette = color_thief.get_palette(color_count=2, quality=5)
 
     # Color noramlization
 
